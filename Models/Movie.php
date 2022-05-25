@@ -2,13 +2,15 @@
 
 class Movie
 {
+    public $poster;
     public $title;
     public $year;
     public $genre;
     public $duration;
 
-    function __construct($title, $year, $genre, $duration)
+    function __construct($poster, $title, $year, $genre, $duration)
     {
+        $this->poster = $poster;
         $this->title = $title;
         $this->year = $year;
         $this->genre = $genre;
@@ -17,6 +19,6 @@ class Movie
 
     public function getMovie()
     {
-        return $this->title . ' ' . $this->year . ' ' . $this->genre . ' ' . $this->duration;
+        return $this->poster . ' ' . $this->title . ' ' . $this->year . ' ' . $this->genre . ' ' . $this->duration;
     }
 }
